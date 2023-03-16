@@ -1,12 +1,6 @@
-import { fileURLToPath } from "url";
-import { readFileSync } from "fs";
-import * as path from "path";
+import { readInput } from "../helper.js";
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
-
-const lines = readFileSync(path.resolve(__dirname, "./input.txt"), {
-  encoding: "utf8"
-}).split("\r\n");
+const lines = readInput(import.meta.url);
 
 let max = 0;
 let current = 0;
